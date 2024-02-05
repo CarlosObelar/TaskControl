@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+        <title>Landing Page</title>
+        <meta name="description" content="Simple landind page" />
+        <meta name="keywords" content="" />
+        <meta name="author" content="" />
+        <link rel="stylesheet" href="https://unpkg.com/tailwindcss@2.2.19/dist/tailwind.min.css"/>
+        <!--Replace with your tailwind.css once created-->
+        <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700" rel="stylesheet" />
+        <!-- Define your gradient here - use online tools to find a gradient matching your branding-->
+        <style>
+            .gradient {
+            background: linear-gradient(90deg, #330867 0%, #30cfd0 100%); 
+            }
+        </style>
+    </head>
+    <body class="leading-normal tracking-normal text-white gradient" style="font-family: 'Source Sans Pro', sans-serif;">
+
+        <!--Header-->
+        <header class="w-full container mx-auto flex flex-wrap items-center justify-start mt-0 py-2">
+                <img src="/static/logo.png" alt="">
+                <a class="toggleColour text-white no-underline hover:no-underline font-bold text-2xl lg:text-4xl" href="">TaskControl</a>
+        </header>
+        <!--End Header-->
+
+        <!--Body-->
+        <div class="pt-24">
+            <div class="container px-3 mx-auto flex flex-wrap flex-col md:flex-row items-center">
+
+                <!--Left Column-->
+                <div class="flex flex-col w-full md:w-2/5 justify-center items-start text-center md:text-left">
+                    <p class="tracking-loose w-full">Tienes problemas con la gestión de tus tareas?</p>
+                    <h1 class="my-4 text-5xl font-bold leading-tight">
+                        TaskControl te ayudará con eso!
+                    </h1>
+                    <p class="leading-normal text-2xl mb-8">
+                        Ten un control de tus tareas de manera ordenada y con detalles sobre el estado de las mismas!
+                    </p>
+                    <div class="flex-row">
+                        <button class="mx-auto lg:mx-0 hover:underline bg-white text-gray-800 font-bold rounded-full my-6 py-4 px-8 shadow-lg focus:outline-none focus:shadow-outline transform transition hover:scale-105 duration-300 ease-in-out">
+                            <a href="/login">Sign-in</a>
+                        </button>
+                        <button class="mx-auto lg:mx-0 hover:underline bg-white text-gray-800 font-bold rounded-full my-6 py-4 px-8 shadow-lg focus:outline-none focus:shadow-outline transform transition hover:scale-105 duration-300 ease-in-out">
+                            <a href="/register">Sign-up</a>
+                        </button>
+                    </div>  
+                </div>
+                <!--End Left Column-->
+
+                <!--Right Column-->
+                <div class="w-full md:w-3/5 py-6 text-center">
+                    <img class="w-full md:w-4/5 z-50 border-b" src="/static/landing_image2.png" />
+                </div>
+                <!--End Right Column-->
+
+            </div>
+        </div>
+        <!--End Body-->
+
+        <!--Footer-->
+        <footer class="gradient pt-24">
+            <hr class="border-b border-gray-100 opacity-25 my-0 py-0">
+            <div class="flex flex-row justify-center space-x-10">
+                <li class="mt-2 inline-block mr-2 md:block md:mr-0">
+                    <a href="#" class="no-underline hover:underline text-white hover:text-pink-500">FAQ</a>
+                </li>
+                <li class="mt-2 inline-block mr-2 md:block md:mr-0">
+                    <a href="#" class="no-underline hover:underline text-white hover:text-pink-500">Support</a>
+                </li>
+                <li class="mt-2 inline-block mr-2 md:block md:mr-0">
+                    <a href="#" class="no-underline hover:underline text-white hover:text-pink-500">About Us</a>
+                </li>
+                <li class="mt-2 inline-block mr-2 md:block md:mr-0">
+                    <a href="#" class="no-underline hover:underline text-white hover:text-pink-500">Contact</a>
+                </li>
+            </div>
+        </footer>
+        <!--End Footer-->
+    </body>
+</html>

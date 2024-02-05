@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+        <title>TaskControl</title>
+        <meta name="description" content="Simple landind page" />
+        <meta name="keywords" content="" />
+        <meta name="author" content="" />
+        <link rel="stylesheet" href="https://unpkg.com/tailwindcss@2.2.19/dist/tailwind.min.css"/>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <!--Replace with your tailwind.css once created-->
+        <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700" rel="stylesheet" />
+        <!-- Define your gradient here - use online tools to find a gradient matching your branding-->
+        <style>
+            .gradient {
+            background: linear-gradient(90deg, #330867 0%, #30cfd0 100%); 
+            }
+        </style>
+        <style>
+            .icon-welcome {
+            background: none;
+            border: none;
+            cursor: pointer;
+            width: 50px;
+            height: 50px;
+            }
+        </style>
+        <style>
+            .icon-button3 {
+            background: none;
+            border: none;
+            cursor: pointer;
+            width: 50px;
+            height: 50px;
+            }
+        </style>
+    </head>
+    <body class="tracking-normal gradient" style="font-family: 'Source Sans Pro', sans-serif;">
+
+        <!--Header-->
+        <header class="w-full container flex flex-wrap items-center justify-start mt-0 py-2">
+                <img src="/static/logo.png" alt="">
+                <a class="toggleColour text-white no-underline hover:no-underline font-bold text-2xl lg:text-4xl text-white" href="/">TaskControl</a>
+        </header>
+        <hr class="border-gray-100 opacity-25 my-0 py-0" />
+        <!--End Header-->
+
+        <!--Body-->
+        <div class="mx-auto w-auto h-96 py-10 flex flex-col justify-center justify-evenly items-center">
+            <div class="flex justify-center mt-4">
+                <h1 class="mx-6 text-4xl font-bold leading-tight text-white pt-3">Here you can update your task!</h1>
+                <img src="/static/keyboard.png" class="icon-welcome" alt="">
+            </div>
+        
+            <form action="{{ url_for('update', id=task.id) }}", method="post">
+        
+                <div class="mb-12 flex justify-between">
+                    <input class="mr-6 rounded-md text-center bg-blue-200 border-2 border-black" name="date" type="date" value="{{ task.date }}">
+                    <input class="mr-3 rounded-md text-center bg-blue-200 border-2 border-black" name="description" type="text" value="{{ task.description }}">
+                    <input class="ml-3 rounded-md text-center bg-blue-200 border-2 border-black" name="state" type="text" value="{{ task.state }}">
+                    <input class="ml-6 rounded-md text-center bg-blue-200 border-2 border-black" name="comment" type="text" placeholder="Write a comment" value="{{ task.comment }}">
+                </div>
+                <div class="flex justify-center mt-10">
+                    <button type="submit" class="icon-button3 pr-4">
+                        <img src="/static/check.png" alt="">
+                    </button>
+                    <button class="icon-button3 pl-4">
+                        <a href="{{ url_for('index') }}">
+                            <img src="/static/cancel.png" alt="">
+                        </a>
+                    </button>
+                </div>
+            </form>
+        </div>
+        <!--End Body-->
+
+    </body>
+</html>
